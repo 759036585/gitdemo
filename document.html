@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 200px;
+            background-color: aqua;
+            box-sizing: border-box;
+            padding-top: 50px;
+            overflow-y: scroll;
+        }
+        .box .box1 {
+            height: 200px;
+            border: 5px solid #000;
+            background-color: aquamarine;
+        }
+
+        .box .box2 {
+            margin-top: 50px;
+            height: 200px;
+            border: 5px solid #000;
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    <script>
+        const box = document.querySelector('.box');
+        const box1 = document.querySelector('.box1');
+        const box2 = document.querySelector('.box2');
+
+        box.scrollTop = 300;
+        
+
+        let log = () => {
+            console.log('======================> box');
+            const b_offsetHeight = box.offsetHeight;
+            const b_offsetWidth = box.offsetWidth;
+            const b_clientHeight = box.clientHeight;
+            const b_clientWidth = box.clientWidth;
+            const b_scrollHeight = box.scrollHeight;
+            const b_scrollWidth = box.scrollWidth;
+
+            console.log(b_offsetHeight, 'offsetHeight');
+            console.log(b_offsetWidth, 'offsetWidth');
+            console.log(b_clientHeight, 'clientHeight');
+            console.log(b_clientWidth, 'clientWidth');
+            console.log(b_scrollHeight, 'scrollHeight');
+            console.log(b_scrollWidth, 'scrollWidth');
+
+            console.log('======================> box1');
+            const b1_offsetHeight = box1.offsetHeight;
+            const b1_offsetWidth = box1.offsetWidth;
+            const b1_clientHeight = box1.clientHeight;
+            const b1_clientWidth = box1.clientWidth;
+            const b1_scrollHeight = box1.scrollHeight;
+            const b1_scrollWidth = box1.scrollWidth;
+            console.log(b1_offsetHeight, 'offsetHeight');
+            console.log(b1_offsetWidth, 'offsetWidth');
+            console.log(b1_clientHeight, 'clientHeight');
+            console.log(b1_clientWidth, 'clientWidth');
+            console.log(b1_scrollHeight, 'scrollHeight');
+            console.log(b1_scrollWidth, 'scrollWidth');
+
+
+            console.log('======================> box2');
+            const b2_offsetHeight = box2.offsetHeight;
+            const b2_offsetWidth = box2.offsetWidth;
+            const b2_clientHeight = box2.clientHeight;
+            const b2_clientWidth = box2.clientWidth;
+            const b2_scrollHeight = box2.scrollHeight;
+            const b2_scrollWidth = box2.scrollWidth;
+            console.log(b2_offsetHeight, 'offsetHeight');
+            console.log(b2_offsetWidth, 'offsetWidth');
+            console.log(b2_clientHeight, 'clientHeight');
+            console.log(b2_clientWidth, 'clientWidth');
+            console.log(b2_scrollHeight, 'scrollHeight');
+            console.log(b2_scrollWidth, 'scrollWidth');
+        }
+
+        
+
+        box.addEventListener('scroll',log);
+
+
+
+
+
+    </script>
+</body>
+</html>
